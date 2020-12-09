@@ -10,11 +10,18 @@ Ridge regression is a regression technique that adopts the L2 regularization. It
 ## 2- Ridge Regression implementation
 We assume that our target feature is y=Xw + ν where ν is a noise or error term.
 If the noise or error term has large values then it is possible that the vector ŵ takes very large values. In this case, it is better to solve the following new problem:
-min|(|y-Xw|)|^2+μ||w||², 
-μ must be set correctly and conveniently.
-Assuming that:
- y (n) =x (n)T w + v(n), where w is a set of random Gaussian parameters independent and identically distributed with zero mean  and a variance s² (prior probability density function). 
-After finding the gradient of an objective function and set it to zero then solve the equation we have found the following optimum ŵ for the measured values ymeas:
-Ŵ= (XTX +λI)-1XTymeas
+
+min|(|y-Xw|)|²+μ||w||² , μ must be set correctly and conveniently.
+
+Assuming that: 
+
+y (n) =x (n)T w + v(n) 
+
+where w is a set of random Gaussian parameters independent and identically distributed with zero mean  and a variance s² (prior probability density function).
+
+After finding the gradient of an objective function and set it to zero then solve the equation I have found the following optimum ŵ for the measured values ymeas:
+
+Ŵ= (XTX +λI)-1$X^T ymeas  
+
 Knowing that different values of λ give different degrees of over-fitting that can be checked through the k-fold cross validation technique. In this lab, λ has been changed to four values 3, 6, 14, 20 and a comparison between those choices will be detailed later. 
 Another way to obtain the ridge regression is the minimization of the square error under the constraint of ||w||=1 (in this case λ is the Lagrange multiplier)
