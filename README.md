@@ -22,7 +22,7 @@ where w is a set of random Gaussian parameters independent and identically distr
 After finding the gradient of an objective function and set it to zero then solve the equation I have found the following optimum ŵ for the measured values ymeas:
 
 $Ŵ= (X^T X +λI)-1X^T ymeas$  
-\test{\intercal}
+$A^T$
 
 Knowing that different values of λ give different degrees of over-fitting that can be checked through the k-fold cross validation technique. In this lab, λ has been changed to four values 3, 6, 14, 20 and a comparison between those choices will be detailed later. 
 Another way to obtain the ridge regression is the minimization of the square error under the constraint of ||w||=1 (in this case λ is the Lagrange multiplier)
